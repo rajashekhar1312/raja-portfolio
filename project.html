@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project Explanation — Raja Shekhar</title>
+  <style>
+    :root {
+      --bg:#f7f8fb;--card:#fff;--muted:#6b7280;--primary:#0f62fe;--accent:#6f3ff5;
+      --radius:14px;--container:1100px;--shadow:0 6px 18px rgba(16,24,40,0.08);
+      font-family:Inter,system-ui,Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;line-height:1.6;font-size:16px}
+    .container{width:calc(100% - 40px);max-width:var(--container);margin:0 auto;padding:40px 0}
+    .site-header{position:sticky;top:0;background:#fff9;backdrop-filter:blur(6px);z-index:40}
+    .header-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .avatar{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;box-shadow:var(--shadow)}
+    .brand h1{margin:0;font-size:18px}
+    .muted{color:var(--muted)}
+    .nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-weight:600;font-size:14px}
+    .nav a:hover{color:var(--primary)}
+    .section{margin-top:40px}
+    .card{padding:24px;border-radius:12px;background:var(--card);box-shadow:var(--shadow);margin-bottom:24px}
+    .back{display:inline-block;margin-bottom:20px;color:var(--primary);text-decoration:none;font-weight:600}
+    ul{margin-top:10px}
+    li{margin-bottom:8px}
+    .highlight{background:#eef4ff;border-left:4px solid var(--primary);padding:12px;border-radius:8px;margin-top:10px;color:#1e293b}
+    .tags span{display:inline-block;margin:6px 6px 0 0;background:#f1f5f9;padding:4px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .site-footer{text-align:center;padding:20px 0;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar">RS</div>
+        <div><h1>Raja Shekhar</h1><p class="muted">Custom Software Engineering Analyst — Kolkata, India</p></div>
+      </div>
+      <nav class="nav">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="project.html">Project Explanation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="index.html" class="back">← Back to Portfolio</a>
+    <section class="section">
+      <h2>Project Explanation</h2>
+
+      <div class="card">
+        <h3>✈️ Airline Automation Chrome Plugin</h3>
+        <p>This plugin automates booking, rebooking, refund, and form-filling operations on airline websites — saving hundreds of man-hours each month.</p>
+        <div class="tags">
+          <span>JavaScript</span><span>Java</span><span>Python</span><span>Chrome Extension</span><span>Web Automation</span>
+        </div>
+
+        <div class="highlight">
+          <strong>My Contributions:</strong>
+          <ul>
+            <li>Designed and developed Chrome extension using <b>JavaScript</b> and <b>content scripts</b> to automate airline workflows.</li>
+            <li>Created <b>modular logic in Java</b> for validation and data handling to ensure consistent automation results.</li>
+            <li>Integrated <b>Python scripts</b> for post-processing and report generation in Excel format.</li>
+            <li>Implemented asynchronous message passing between popup, background, and content scripts.</li>
+            <li>Debugged production issues on live airline portals and improved reliability by 60%.</li>
+            <li>Enhanced plugin performance by caching frequent requests and reducing DOM queries.</li>
+          </ul>
+        </div>
+
+        <p><strong>Outcome:</strong> Achieved 60% improvement in ticketing workflow efficiency and reduced manual errors significantly.</p>
+      </div>
+
+      <div class="card">
+        <h3>🌐 AEM Bulk Update Plugin</h3>
+        <p>Built a Chrome plugin for automating component and metadata updates in Adobe Experience Manager (AEM), streamlining author workflows.</p>
+        <div class="tags">
+          <span>JavaScript</span><span>AEM</span><span>Sling Models</span><span>Automation</span><span>Chrome Plugin</span>
+        </div>
+
+        <div class="highlight">
+          <strong>My Contributions:</strong>
+          <ul>
+            <li>Created logic to scan and fetch page structures from AEM author instances.</li>
+            <li>Developed automation to update specific component properties in bulk using REST API calls.</li>
+            <li>Wrote <b>custom scripts</b> to identify outdated components and replace them with newer versions.</li>
+            <li>Handled <b>authentication</b> and session validation seamlessly within the extension.</li>
+            <li>Designed a UI panel for users to select pages/components dynamically.</li>
+            <li>Ensured safe rollback capability using backup JSON before every update.</li>
+          </ul>
+        </div>
+
+        <p><strong>Outcome:</strong> Reduced AEM authoring time drastically, improving content publishing cycles by 40%.</p>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="year"></span> Raja Shekhar — Built with ☕ & code</small></div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
