@@ -1,62 +1,307 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Raja Shekhar — Portfolio</title>
   <style>
-    :root{--bg:#f7f8fb;--card:#fff;--muted:#6b7280;--primary:#0f62fe;--accent:#6f3ff5;--radius:14px;--container:1100px;--shadow:0 6px 18px rgba(16,24,40,0.08);font-family:Inter,system-ui,Arial}
-    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#0f172a;line-height:1.5;font-size:16px}
-    .container{width:calc(100% - 40px);max-width:var(--container);margin:0 auto;padding:40px 0}
-    .site-header{position:sticky;top:0;background:#fff9;backdrop-filter:blur(6px);z-index:40}
-    .header-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0}
-    .brand{display:flex;gap:14px;align-items:center}
-    .avatar{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;box-shadow:var(--shadow)}
-    .brand h1{margin:0;font-size:18px}.muted{color:var(--muted)}
-    .nav a{margin-left:16px;text-decoration:none;color:var(--muted);font-weight:600;font-size:14px}.nav a:hover{color:var(--primary)}
-    .hero{display:flex;gap:28px;flex-wrap:wrap;background:var(--card);padding:26px;border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero h2{margin:0 0 10px}.actions{margin-top:14px;display:flex;gap:12px}
-    .btn{padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn.primary{background:var(--primary);color:#fff}.btn.outline{border:1px solid #ddd;color:var(--muted)}
-    .card{padding:18px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)}.section{margin-top:40px}.section h3{margin:0 0 12px}
-    .grid{display:grid;gap:16px}@media(min-width:800px){.grid{grid-template-columns:repeat(3,1fr)}}
-    .tags span{display:inline-block;margin:6px 6px 0 0;background:#f1f5f9;padding:4px 8px;border-radius:999px;font-size:12px;color:var(--muted)}
-    .timeline{display:flex;flex-direction:column;gap:16px}.timeline .item{display:flex;gap:16px}.timeline .when{width:140px;color:var(--muted);font-size:14px}
-    .chips span{background:#f8fafc;padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:14px;margin:4px}
-    .contact-card{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}.site-footer{text-align:center;padding:20px 0;color:var(--muted);font-size:13px}
+    :root {
+      --bg: #f7f8fb;
+      --card: #fff;
+      --muted: #6b7280;
+      --primary: #0f62fe;
+      --accent: #6f3ff5;
+      --radius: 14px;
+      --container: 1100px;
+      --shadow: 0 6px 18px rgba(16, 24, 40, 0.08);
+      font-family: Inter, system-ui, Arial
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--bg), #fff);
+      color: #0f172a;
+      line-height: 1.5;
+      font-size: 16px
+    }
+
+    .container {
+      width: calc(100% - 40px);
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 40px 0
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: #fff9;
+      backdrop-filter: blur(6px);
+      z-index: 40
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 16px 0
+    }
+
+    .brand {
+      display: flex;
+      gap: 14px;
+      align-items: center
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: var(--shadow)
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 18px
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .nav a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px
+    }
+
+    .nav a:hover {
+      color: var(--primary)
+    }
+
+    .hero {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      background: var(--card);
+      padding: 26px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow)
+    }
+
+    .hero h2 {
+      margin: 0 0 10px
+    }
+
+    .actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 12px
+    }
+
+    .btn {
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    .btn.primary {
+      background: var(--primary);
+      color: #fff
+    }
+
+    .btn.outline {
+      border: 1px solid #ddd;
+      color: var(--muted)
+    }
+
+    .card {
+      padding: 18px;
+      border-radius: 12px;
+      background: var(--card);
+      box-shadow: var(--shadow)
+    }
+
+    .section {
+      margin-top: 40px
+    }
+
+    .section h3 {
+      margin: 0 0 12px
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px
+    }
+
+    @media(min-width:800px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    .tags span {
+      display: inline-block;
+      margin: 6px 6px 0 0;
+      background: #f1f5f9;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .timeline .item {
+      display: flex;
+      gap: 16px
+    }
+
+    .timeline .when {
+      width: 140px;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    .chips span {
+      background: #f8fafc;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 14px;
+      margin: 4px
+    }
+
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 20px 0;
+      color: var(--muted);
+      font-size: 13px
+    }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <div class="avatar">RS</div>
-        <div><h1>Raja Shekhar</h1><p class="muted">Custom Software Engineering Analyst — Kolkata, India</p></div>
+        <div>
+          <h1>Raja Shekhar</h1>
+          <p class="muted">Custom Software Engineering Analyst — Kolkata, India</p>
+        </div>
       </div>
-      <nav class="nav"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="project.html">Project Explanation</a></nav>
+      <nav class="nav"><a href="project.html">Projects</a><a href="#experience">Experience</a><a
+          href="#skills">Skills</a><a href="#contact">Contact</a></nav>
     </div>
   </header>
   <main class="container">
-    <section class="hero"><div class="hero-left" style="flex:1"><h2>Hi — I’m Raja.</h2>
-      <p>I build web automation & tooling that saves time and reduces errors for airline operations and web platforms. Skilled in Java, JavaScript, SQL and Python, I love turning repetitive tasks into reliable automations. I have most proficiency in Java and have implemented the code logic from Java into my problem solving skills for the automation project.</p>
-      <div class="actions"><a class="btn primary" href="mailto:rajashekhar654@gmail.com">Contact Me</a>
-      <a class="btn outline" href="RAJA RESUME.pdf" target="_blank">Download Resume</a></div>
-      <p class="muted" style="margin-top:10px;font-size:14px">Available for freelance & new roles · Based in Kolkata</p></div>
-      <aside style="width:220px;display:flex;flex-direction:column;gap:12px"><div class="card"><strong>3+ years</strong><br/>at Accenture</div>
-      <div class="card"><strong>Chrome Extensions</strong><br/>Automation & workflows</div><div class="card"><strong>60%+</strong><br/>Workflow improvement</div></aside></section>
-    <section id="projects" class="section"><h3>Selected Projects</h3><div class="grid">
-      <article class="card"><h4>Airline Automation Chrome Plugin</h4><p>Automated booking, re-booking, and form filling on airline websites.</p><div class="tags"><span>Chrome Plugin</span><span>JavaScript</span><span>Java</span><span>Python</span><span>Web Automation</span></div></article>
-      <article class="card"><h4>AEM Bulk Updates</h4><p>Plugins for bulk updating the components on AEM site.</p><div class="tags"><span>Chrome Plugin</span><span>JavaScript</span><span>Java</span><span>Python</span><span>Web Automation</span></div></article>
-    </div></section>
-    <section id="experience" class="section"><h3>Experience</h3><div class="timeline">
-      <div class="item"><div class="when">Sep 2024 – Present</div><div class="what"><h4>Custom Software Engineering Analyst — Accenture</h4><ul><li>Built Chrome plugins for automating airline workflows.</li><li>Developed in Java 8, JavaScript, and Python.</li><li>Improved workflows by 60% with automation.</li><li>Worked on AEM development project.</li><li>Helped by creating pugins for bulk updates in the AEM project.</li></ul></div></div>
-      <div class="item"><div class="when">Aug 2022 – Aug 2024</div><div class="what"><h4>Custom Software Engineering Associate — Accenture</h4><ul><li>Developed plugins for booking and refunds.</li><li>Responsible for requirement gathering and analyzing the user story.</li><li>Provided 24*7 support for the plugins on live site.</li><li>Supported QA testing and environments.</li></ul></div></div>
-    </div></section>
-    <section id="skills" class="section"><h3>Skills</h3><div class="chips"><span>Java 8</span><span>Spring Boot</span><span>JavaScript</span><span>HTML/CSS</span><span>SQL</span><span>Python</span><span>Agile & Scrum</span></div></section>
-    <section id="education" class="section"><h3>Education</h3><div class="card"><strong>B.Tech — Computer Science & IT</strong><br/>CV Raman Global University, Bhubaneswar, Odisha (2018 – 2022)<br/><br/><strong>Intermediate (PCM)</strong></br>Shivam Convent, Patna, Bihar (2016 – 2018)</div></section>
-    <section id="contact" class="section"><h3>Contact</h3><div class="card contact-card"><div><p>📧 <a href="mailto:rajashekhar654@gmail.com">rajashekhar654@gmail.com</a></p><p>📱 +91-6370981661</p><p>📍 Kolkata, West Bengal</p></div><div><a href="https://www.linkedin.com/in/raja-shekhar-956952206">LinkedIn</a></div></div></section>
+    <section class="hero">
+      <div class="hero-left" style="flex:1">
+        <h2>Hi — I’m Raja.</h2>
+        <p>I build web automation & tooling that saves time and reduces errors for airline operations and web platforms.
+          Skilled in Java, JavaScript, SQL and Python, I love turning repetitive tasks into reliable automations. I have
+          most proficiency in Java and have implemented the code logic from Java into my problem solving skills for the
+          automation project.</p>
+        <div class="actions"><a class="btn primary" href="mailto:rajashekhar654@gmail.com">Contact Me</a>
+          <a class="btn outline" href="RAJA RESUME.pdf" target="_blank">Download Resume</a>
+        </div>
+        <p class="muted" style="margin-top:10px;font-size:14px">Available for freelance & new roles · Based in Kolkata
+        </p>
+      </div>
+      <aside style="width:220px;display:flex;flex-direction:column;gap:12px">
+        <div class="card"><strong>3+ years</strong><br />at Accenture</div>
+        <div class="card"><strong>Chrome Extensions</strong><br />Automation & workflows</div>
+        <div class="card"><strong>60%+</strong><br />Workflow improvement</div>
+      </aside>
+    </section>
+    <section id="experience" class="section">
+      <h3>Experience</h3>
+      <div class="timeline">
+        <div class="item">
+          <div class="when">Sep 2024 – Present</div>
+          <div class="what">
+            <h4>Custom Software Engineering Analyst — Accenture</h4>
+            <ul>
+              <li>Built Chrome plugins for automating airline workflows.</li>
+              <li>Developed in Java 8, JavaScript, and Python.</li>
+              <li>Improved workflows by 60% with automation.</li>
+              <li>Worked on AEM development project.</li>
+              <li>Helped by creating pugins for bulk updates in the AEM project.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="item">
+          <div class="when">Aug 2022 – Aug 2024</div>
+          <div class="what">
+            <h4>Custom Software Engineering Associate — Accenture</h4>
+            <ul>
+              <li>Developed plugins for booking and refunds.</li>
+              <li>Responsible for requirement gathering and analyzing the user story.</li>
+              <li>Provided 24*7 support for the plugins on live site.</li>
+              <li>Supported QA testing and environments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section">
+      <h3>Skills</h3>
+      <div class="chips"><span>Java 8</span><span>Spring
+          Boot</span><span>JavaScript</span><span>HTML/CSS</span><span>SQL</span><span>Python</span><span>Agile &
+          Scrum</span></div>
+    </section>
+    <section id="education" class="section">
+      <h3>Education</h3>
+      <div class="card"><strong>B.Tech — Computer Science & IT</strong><br />CV Raman Global University, Bhubaneswar,
+        Odisha (2018 – 2022)<br /><br /><strong>Intermediate (PCM)</strong></br>Shivam Convent, Patna, Bihar (2016 –
+        2018)</div>
+    </section>
+    <section id="contact" class="section">
+      <h3>Contact</h3>
+      <div class="card contact-card">
+        <div>
+          <p>📧 <a href="mailto:rajashekhar654@gmail.com">rajashekhar654@gmail.com</a></p>
+          <p>📱 +91-6370981661</p>
+          <p>📍 Kolkata, West Bengal</p>
+        </div>
+        <div><a href="https://www.linkedin.com/in/raja-shekhar-956952206">LinkedIn</a></div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container"><small>© <span id="year"></span> Raja Shekhar — Built with ☕ & code</small></div></footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}})});</script>
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="year"></span> Raja Shekhar — Built with ☕ & code</small></div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear(); document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', e => { const t = document.querySelector(a.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }) } }) });</script>
 </body>
+
 </html>
